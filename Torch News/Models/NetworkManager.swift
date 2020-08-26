@@ -12,7 +12,8 @@ class NetworkManager: ObservableObject {
     @Published var articles = [Article]()
     
     func fetchTopHeadlines() {
-        if let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=3370934136884088840d28e714e64cc1") {
+        let apiKey = ""
+        if let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=\(apiKey)") {
             
             let session = URLSession(configuration: .default)
             
